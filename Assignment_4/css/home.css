@@ -1,0 +1,132 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Bebas Neue', 'Poppins', sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+}
+
+/* Assign grid areas */
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#masthead {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push nav to the right */
+    z-index: 10; /* Ensures it stays above other content */
+}
+
+.home-page-icon {
+    width: 60px;
+}
+
+#masthead nav {
+    margin-left: auto; /* Ensures nav stays at the far right */
+    margin-right: 5%;
+}
+
+#masthead nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#masthead nav ul li {
+    margin: 0px 10px;
+    list-style-type: none;
+}
+
+#masthead nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#masthead nav ul a:hover {
+    padding: 10px;
+    border: 2px dotted black;
+}
+
+.sketchfab-embed-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    /* Places it behind other content */
+}
+
+.sketchfab-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#intro {
+    position: absolute;
+    top: 6.5%;
+    height: 90%;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.15); /* semi-transparent background */
+    backdrop-filter: blur(10px); /* blur effect */
+    color: white;
+    text-align: center;
+}
+
+#intro h1 {
+    margin-top: 35%;
+    font-size: 3rem;
+    text-shadow: 7px 1px 4px rgba(0, 0, 0, 0.75); /* text shadow for depth */
+}
+
+#intro p {
+    font-size: 1.5rem;
+    text-shadow: 7px 1px 4px rgba(0, 0, 0, 0.75); /* text shadow for depth */
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+}
+
+#footer div {
+    margin-left: 10%;
+}
+
+#footer p {
+    margin-top: 2px;
+}
