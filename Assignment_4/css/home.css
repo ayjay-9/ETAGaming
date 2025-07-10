@@ -51,7 +51,7 @@ footer {
 
 #masthead nav {
     margin-left: auto; /* Ensures nav stays at the far right */
-    margin-right: 5%;
+    margin-right: 1%; /* Adds some space from the right edge */
 }
 
 #masthead nav ul {
@@ -60,18 +60,30 @@ footer {
 }
 
 #masthead nav ul li {
-    margin: 0px 10px;
     list-style-type: none;
 }
 
 #masthead nav ul a {
     text-decoration: none;
     color: black;
+    display: inline-block;
+    transition: transform 0.01s;
+}
+
+#masthead nav ul a span {
+    display: inline-block;
+    transition: transform 0.01s;
+    padding: 7px 15px; /* Add padding to the text */
 }
 
 #masthead nav ul a:hover {
-    padding: 10px;
-    border: 2px dotted black;
+    transform: skewX(-20deg);
+    background-color: #3CA9E2;
+    color: white;
+}
+
+#masthead nav ul a:hover span {
+    transform: skewX(20deg); /* Unskew the text */
 }
 
 .sketchfab-embed-wrapper {
@@ -92,8 +104,7 @@ footer {
 
 #intro {
     position: absolute;
-    top: 6.5%;
-    height: 90%;
+    height: 100vh;
     width: 40%;
     background-color: rgba(255, 255, 255, 0.15); /* semi-transparent background */
     backdrop-filter: blur(10px); /* blur effect */
@@ -105,11 +116,33 @@ footer {
     margin-top: 35%;
     font-size: 3rem;
     text-shadow: 7px 1px 4px rgba(0, 0, 0, 0.75); /* text shadow for depth */
+
 }
 
 #intro p {
     font-size: 1.5rem;
     text-shadow: 7px 1px 4px rgba(0, 0, 0, 0.75); /* text shadow for depth */
+}
+
+.welcome-heading {
+    opacity: 0;
+    transform: translateY(400px);
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 3s; /* Delays the heading animation */
+}
+
+.welcome-tagline {
+    opacity: 0;
+    transform: translateY(400px);
+    animation: slideIn 0.8s ease-out forwards;
+    animation-delay: 4s; /* Delays the tagline animation */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #footer {
@@ -121,12 +154,20 @@ footer {
     background-color: white;
     width: 100%;
     height: 100px;
+    line-height: 0.5;
 }
 
 #footer div {
     margin-left: 10%;
+    border-right: 1px solid black;
+    text-align: center;
 }
 
-#footer p {
-    margin-top: 2px;
+#footer a {
+    text-decoration: none;
+}
+
+#footer svg {
+    width: 13px;
+    fill: blue;
 }
