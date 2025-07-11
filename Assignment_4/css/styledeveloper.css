@@ -1,0 +1,59 @@
+#masthead {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push nav to the right */
+    z-index: 10; /* Ensures it stays above other content */
+}
+
+.home-page-icon {
+    width: 60px;
+}
+
+#masthead nav {
+    margin-left: auto; /* Ensures nav stays at the far right */
+    margin-right: 5%;
+}
+
+#masthead nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#masthead nav ul li {
+    margin: 0px 10px;
+    list-style-type: none;
+}
+
+#masthead nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#masthead nav ul a:hover {
+    padding: 10px;
+    border: 2px dotted black;
+}
+
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+}
+
+#footer div {
+    margin-left: 10%;
+}
+
+#footer p {
+    margin-top: 2px;
+}
