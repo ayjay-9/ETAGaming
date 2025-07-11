@@ -4,7 +4,9 @@ html {
 
 body {
     margin: 0 auto;
+    width: 100%;
     font-family: 'Bebas Neue', 'Poppins', sans-serif;
+    font-weight: bolder;
 }
 
 #container {
@@ -43,6 +45,7 @@ footer {
     align-items: center;
     justify-content: space-between; /* Push nav to the right */
     z-index: 10; /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
 }
 
 .home-page-icon {
@@ -132,6 +135,7 @@ footer {
 }
 
 .welcome-tagline {
+    font-style: italic;
     opacity: 0;
     transform: translateY(400px);
     animation: slideIn 0.8s ease-out forwards;
@@ -155,10 +159,11 @@ footer {
     width: 100%;
     height: 100px;
     line-height: 0.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+    /* Adds a subtle shadow for depth */
 }
 
 #footer div {
-    margin-left: 10%;
     border-right: 1px solid black;
     text-align: center;
 }
