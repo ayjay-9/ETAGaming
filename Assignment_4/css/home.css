@@ -55,7 +55,7 @@ aside {
 }
 
 #masthead nav ul {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -87,6 +87,45 @@ aside {
     transform: skewX(20deg); /* Unskew the text */
 }
 
+/* hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-links {
+  transition: all 0.3s ease-in-out;
+  display: none; /* start hidden */
+  flex-direction: column;
+}
+/* making the burger menu an x */
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+/* Toggle animation: Hamburger to X */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
 .sketchfab-embed-wrapper {
     position: fixed;
     top: 0;
@@ -104,7 +143,7 @@ aside {
 }
 
 #intro {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 40%;
     background-color: rgba(255, 255, 255, 0.15); /* semi-transparent background */
@@ -114,8 +153,9 @@ aside {
 }
 
 #intro h1 {
-    margin-top: 35%;
-    font-size: 3rem;
+    padding-top: 35%;
+    /* scale text to small */
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
     text-shadow: 7px 1px 4px rgba(0, 0, 0, 0.75); /* text shadow for depth */
 
 }
@@ -180,11 +220,11 @@ aside {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* gap: 60px; */
+    gap: 10px;
     /* margin: 10px; */
     /* padding: 10px; */
     font-weight: bold;
-    font-size: 16px;
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
 }
 
 /* footer styling */
@@ -205,7 +245,8 @@ aside {
 
 .footer-socials img {
     padding: 10px;
-    height: 20px;
+    /* height: 20px; */
+    height: clamp(10px, 2.5vw, 20px);
     transition: transform 0.2s;
 }
 
@@ -222,8 +263,11 @@ aside {
 
 .footer-bottom-right {
     /* display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    min-width: 150px;
     flex-wrap: wrap; */
+    gap: 1rem;
     grid-column-start: 3;
     grid-row-start: 2;
     padding: 10px;
@@ -258,4 +302,53 @@ aside {
 
 .footer-links a:hover {
     color: #2c9ef5;
+}
+
+/* media queries */
+
+
+/* Responsive - hide links and show hamburger on small screens */
+@media (max-width: 839px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    width: 200px;
+    padding: 1rem;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* visible nav on large screens */
+@media (min-width: 840px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+     transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }

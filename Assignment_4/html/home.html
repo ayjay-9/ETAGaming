@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ETA Gaming</title>
     <link rel="stylesheet" href="../css/home.css">
+    
 </head>
 
 <body>
-    <div class="container">
+    <div id="container">
         <header id="masthead">
             <a href="./home.html">
                 <img src="../images/home-page-icon.png" class="home-page-icon" alt="ETA Logo">
             </a>
             <p>ETA Gaming</p>
-            <nav>
-                <ul>
+            <nav class="navbar">
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="./"><span>HOME</span></a></li>
                     <li><a href="#"><span>GENRES</span></a></li>
                     <li><a href="#"><span>EVENTS</span></a></li>
@@ -76,6 +82,7 @@
         </footer>
 
     </div>
+<script src="../js/home.js"></script>
 </body>
 
 </html>
