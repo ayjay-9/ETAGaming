@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0 auto;
+    background: linear-gradient(to right, #000, #1a5aff);
     width: 100%;
     font-family: 'Bebas Neue', 'Poppins', sans-serif;
     font-weight: bolder;
@@ -13,10 +14,10 @@ body {
 #masthead {
     background-color: white;
     width: 100%;
-    position: fixed;
+    position: static;
     top: 0;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: space-between; /* Push nav to the right */
     z-index: 10; /* Ensures it stays above other content */
@@ -109,7 +110,7 @@ footer {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: repeat(2,1fr);
     /* border: 1px solid black; */
-    position: fixed;
+    position: static;
     bottom: 0;
     background-color: white;
     width: 100%;
@@ -142,6 +143,7 @@ footer {
     /* padding: 10px; */
     font-weight: bold;
     font-size: clamp(0.5rem, 2.5vw, 1rem);
+    /* color: #000; */
 }
 
 /* footer styling */

@@ -38,7 +38,8 @@ aside {
     position: fixed;
     top: 0;
     display: flex;
-    flex-wrap: wrap;
+    /* not needed cause it stretches the nav itself no good */
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: space-between; /* Push nav to the right */
     z-index: 10; /* Ensures it stays above other content */
