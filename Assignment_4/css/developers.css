@@ -1,0 +1,115 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Bebas Neue', 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+}
+
+/* Assign grid areas */
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#masthead {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push nav to the right */
+    z-index: 10; /* Ensures it stays above other content */
+}
+
+.home-page-icon {
+    width: 60px;
+}
+
+#masthead nav {
+    margin-left: auto; /* Ensures nav stays at the far right */
+    margin-right: 1%; /* Adds some space from the right edge */
+}
+
+#masthead nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#masthead nav ul li {
+    list-style-type: none;
+}
+
+#masthead nav ul a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: transform 0.01s;
+}
+
+#masthead nav ul a span {
+    display: inline-block;
+    transition: transform 0.01s;
+    padding: 7px 15px; /* Add padding to the text */
+}
+
+#masthead nav ul a:hover {
+    transform: skewX(-20deg);
+    background-color: #3CA9E2;
+    color: white;
+}
+
+#masthead nav ul a:hover span {
+    transform: skewX(20deg); /* Unskew the text */
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    line-height: 0.5;
+}
+
+#footer div {
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+#footer a {
+    text-decoration: none;
+}
+
+#footer svg {
+    width: 13px;
+    fill: blue;
+}
