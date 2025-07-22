@@ -6,6 +6,8 @@
     <title>Genres</title>
 
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/genres.css">
+    <script src="../js/genres.js" defer></script>
 </head>
 <body>
 
@@ -33,23 +35,19 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <div class="genres-container">
-                <div class="genre-card">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/capsule_616x353.jpg" alt="Marvel Rivals">
-                <div class="genre-info">
-                    <h3>SCI-FI</h3>
-                    <button>MORE INFO</button>
-                </div>
-                </div>
-                <div class="genre-card">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/Ghost_of_Tsushima.jpg" alt="Ghost of Tsushima">
-                <div class="genre-info">
-                    <h3>ACTION</h3>
-                    <button>MORE INFO</button>
-                </div>
+
+        <section class="carousel">
+            <div class="slides-container" id="slides-container">
+            <!-- Slides are dynamically added via JavaScript -->
             </div>
-        </main>
+
+            <button class="nav prev" id="prev">&#10094;</button>
+            <button class="nav next" id="next">&#10095;</button>
+
+            <div class="indicators" id="indicators">
+            <!-- Dots will be injected here -->
+            </div>
+        </section>
 
         <footer id="footer">
             <div class="footer-logo">
