@@ -38,8 +38,6 @@ aside {
     position: fixed;
     top: 0;
     display: flex;
-    /* not needed cause it stretches the nav itself no good */
-    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: space-between; /* Push nav to the right */
     z-index: 10; /* Ensures it stays above other content */
@@ -192,7 +190,6 @@ aside {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: repeat(2,1fr);
-    /* border: 1px solid black; */
     position: fixed;
     bottom: 0;
     background-color: white;
@@ -203,27 +200,10 @@ aside {
     /* Adds a subtle shadow for depth */
 }
 
-/* #footer div {
-    /* border-right: 1px solid black; */
-    /* text-align: center; 
-} */
-
-/* #footer a {
-    text-decoration: none;
-} */
-
-/* #footer svg {
-    /* width: 13px;
-    fill: blue; 
-}*/
-
 .footer-names {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
-    /* margin: 10px; */
-    /* padding: 10px; */
     font-weight: bold;
     font-size: clamp(0.5rem, 2.5vw, 1rem);
 }
@@ -231,7 +211,6 @@ aside {
 /* footer styling */
 .footer-logo {
     text-align: center;
-    margin-bottom: 10px;
 }
 
 .footer-logo img {
@@ -246,7 +225,6 @@ aside {
 
 .footer-socials img {
     padding: 10px;
-    /* height: 20px; */
     height: clamp(10px, 2.5vw, 20px);
     transition: transform 0.2s;
 }
@@ -255,35 +233,18 @@ aside {
     transform: scale(1.2);
 }
 
-/* .footer-divider {
-    width: 90%;
-    height: 1px;
-    background-color: #ccc;
-    margin: 10px auto;
-} */
-
 .footer-bottom-right {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 150px;
-    flex-wrap: wrap; */
     gap: 1rem;
     grid-column-start: 3;
     grid-row-start: 2;
-    padding: 10px;
     font-size: 12px;
     text-align: center;
     /* align-items: flex-end; */
 }
 
 .footer-bottom-left{
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; */
     grid-column-start: 1;
     grid-row-start: 2;
-    padding: 0 20px;
     font-size: 12px;
     text-align: center;
     /* align-items: flex-end; */
@@ -309,7 +270,7 @@ aside {
 
 
 /* Responsive - hide links and show hamburger on small screens */
-@media (max-width: 839px) {
+@media (max-width: 984px) {
   .hamburger {
     display: flex;
   }
@@ -337,7 +298,7 @@ aside {
 }
 
 /* visible nav on large screens */
-@media (min-width: 840px) {
+@media (min-width: 985px) {
   .nav-links {
     display: flex;
     flex-direction: row;

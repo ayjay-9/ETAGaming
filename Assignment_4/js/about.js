@@ -29,9 +29,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             aboutVision.classList.remove('visible');
         } else {
             locations.classList.remove('visible');
-            aboutMissionVision.classList.add('visible');
-            aboutMission.classList.add('visible');
-            aboutVision.classList.add('visible');
         }
     }
 
