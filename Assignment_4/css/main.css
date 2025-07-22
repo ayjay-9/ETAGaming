@@ -110,7 +110,7 @@ footer {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: repeat(2,1fr);
     /* border: 1px solid black; */
-    position: static;
+    position: relative;
     bottom: 0;
     background-color: white;
     width: 100%;
