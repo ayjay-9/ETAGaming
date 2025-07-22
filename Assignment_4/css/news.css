@@ -1,0 +1,408 @@
+
+/* LANDING PAGE SECTION */
+/* landing page section styling */
+.news-hero {
+  background: linear-gradient(to right, #000, #1a5aff);
+  /* padding: 2rem; */
+  color: white;
+  /* padding-top: 1rem; */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* overflow: auto; */
+}
+
+/* main div under section news hero */
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.hero-left {
+  flex: 2;
+}
+/* Title styling */
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline 0.2rem;
+  text-underline-offset: 1rem;
+}
+
+/* Carousel styling */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  perspective: 1000px;
+  height: 100%;
+}
+
+/* all slides */
+.slides {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* individual slides */
+.slide {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s ease;
+  opacity: 0;
+  z-index: 1;
+  transform: scale(0.8) rotateY(0deg);
+}
+
+/* centre slide */
+.slide.active {
+  opacity: 1;
+  transform: scale(1) translateZ(20px);
+  z-index: 5;
+}
+
+/* first slide to the left of main slide */
+.slide.left {
+  opacity: 0.8;
+  transform: scale(0.9) translateX(-220px) rotateY(15deg);
+  z-index: 4;
+}
+
+/* first slide to the right of main slide */
+.slide.right {
+  opacity: 0.8;
+  transform: scale(0.9) translateX(220px) rotateY(-15deg);
+  z-index: 4;
+}
+
+.slide.far-left {
+  opacity: 0.5;
+  transform: scale(0.8) translateX(-400px) rotateY(25deg);
+  z-index: 3;
+}
+
+.slide.far-right {
+  opacity: 0.5;
+  transform: scale(0.8) translateX(400px) rotateY(-25deg);
+  z-index: 3;
+}
+
+.slide.active:hover {
+  animation: pulseGlow 1.5s infinite ease-in-out;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* slides keyframes */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+                0 0 20px rgba(0, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7),
+                0 0 30px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+                0 0 20px rgba(0, 255, 255, 0.4);
+  }
+}
+
+/*arrow styling */
+/* general positioning and styling for both */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow.left { left: 2rem; }
+.arrow.right { right: 2rem; }
+
+/* dots styling below image to show current image */
+/* positioning */
+.dots {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* general styling for all dots  */
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* set colour for active dot */
+.dot.active {
+  background-color: white;
+}
+
+/* styling for popular stories section */
+.popular-stories {
+  flex: 1;
+  background: #1a5bff48;
+  /* padding: 1rem; */
+  border-radius: 8px;
+}
+
+/* heading styling */
+.popular-stories h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-decoration: underline 0.2rem;
+  text-underline-offset: 1rem;
+}
+
+/* general list styling */
+.popular-list {
+  list-style: none;
+  padding: 0;
+  padding-top: 1rem;
+}
+
+/* list positioning */
+.popular-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  /* padding-left: 1; */
+}
+
+/* icons styling for popular list */
+.popular-list img {
+  width: 64px;
+  height: 64px;
+  padding-right: 2rem;
+}
+
+
+/* NEWS FEED SECTION */
+.news-feed {
+  /* padding: 2rem; */
+  padding-top: 1rem;
+  background: #f5f5f5;
+  width: 100%;
+  height: 100%;
+}
+
+.news-feed h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.news-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.news-card img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.news-content {
+  flex: 1;
+}
+
+.news-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-content p {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.news-content .date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* news media querries */
+@media (max-width: 768px) {
+  .news-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .news-card img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* nav links repeat code to make burger menu function in gaming page*/
+
+#masthead {
+    background-color: #ffffff;
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    /* not needed cause it stretches the nav itself no good */
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between; /* Push nav to the right */
+    z-index: 10; /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+#masthead p{
+  color: rgb(0, 0, 0);
+}
+
+#masthead nav ul a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    transition: transform 0.01s;
+}
+
+#masthead nav ul a span {
+    display: inline-block;
+    transition: transform 0.01s;
+    padding: 7px 15px; /* Add padding to the text */
+}
+
+#masthead nav ul a:hover {
+    transform: skewX(-20deg);
+    background-color: #3CA9E2;
+    color: white;
+}
+
+#masthead nav ul a:hover span {
+    transform: skewX(20deg); /* Unskew the text */
+}
+
+/* hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-links {
+  transition: all 0.3s ease-in-out;
+  display: none; /* start hidden */
+  flex-direction: column;
+}
+/* making the burger menu an x */
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+/* Toggle animation: Hamburger to X */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+/* media queries for nav */
+
+@media (max-width: 839px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    width: 200px;
+    padding: 1rem;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  #masthead nav ul a{
+    color: #000;
+  }
+  .nav-links.show {
+    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* visible nav on large screens */
+@media (min-width: 840px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+     transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

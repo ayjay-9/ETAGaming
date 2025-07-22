@@ -1,0 +1,234 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    background: linear-gradient(to right, #000, #1a5aff);
+    width: 100%;
+    font-family: 'Bebas Neue', 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
+/* navigation and header styling */
+#masthead {
+    background-color: white;
+    width: 100%;
+    position: static;
+    top: 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between; /* Push nav to the right */
+    z-index: 10; /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+.home-page-icon {
+    width: 60px;
+}
+
+#masthead nav {
+    margin-left: auto; /* Ensures nav stays at the far right */
+    margin-right: 1%; /* Adds some space from the right edge */
+}
+
+#masthead nav ul {
+    /* display: flex; */
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#masthead nav ul li {
+    list-style-type: none;
+}
+
+#masthead nav ul a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: transform 0.01s;
+}
+
+#masthead nav ul a span {
+    display: inline-block;
+    transition: transform 0.01s;
+    padding: 7px 15px; /* Add padding to the text */
+}
+
+#masthead nav ul a:hover {
+    transform: skewX(-20deg);
+    background-color: #3CA9E2;
+    color: white;
+}
+
+#masthead nav ul a:hover span {
+    transform: skewX(20deg); /* Unskew the text */
+}
+
+/* hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-links {
+  transition: all 0.3s ease-in-out;
+  display: none; /* start hidden */
+  flex-direction: column;
+}
+/* making the burger menu an x */
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+/* Toggle animation: Hamburger to X */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* footer styling */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    position: relative;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    line-height: 0.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+    /* Adds a subtle shadow for depth */
+}
+
+.footer-names {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
+}
+
+/* footer styling */
+.footer-logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-socials img {
+    padding: 10px;
+    height: clamp(10px, 2.5vw, 20px);
+    transition: transform 0.2s;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom-right {
+    gap: 1rem;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-bottom-left{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-links a {
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #2c9ef5;
+}
+
+/* media queries */
+
+
+/* Responsive - hide links and show hamburger on small screens */
+@media (max-width: 984px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    width: 200px;
+    padding: 1rem;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* visible nav on large screens */
+@media (min-width: 985px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+     transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
