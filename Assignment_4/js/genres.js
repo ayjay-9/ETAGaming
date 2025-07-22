@@ -1,27 +1,27 @@
 const slidesData = [
   {
     title: 'SCI-FI',
-    image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/capsule_616x353.jpg',
+    image: '../images/callofduty.jpg',
     sectionId: '#sci-fi-section'
   },
   {
     title: 'ACTION',
-    image: 'https://upload.wikimedia.org/wikipedia/en/2/2a/Ghost_of_Tsushima.jpg',
+    image: '../images/Batman.webp',
     sectionId: '#action-section'
   },
   {
     title: 'ADVENTURE',
-    image: 'https://cdn1.epicgames.com/offer/9b8d181f6e2b467caf5ebd6c355c4f3e/EGS_UNCHARTEDLegacyOfThievesCollection_NaughtyDog_S1_2560x1440-1b3e01c3aa754f86ecdbdf46bb2a2b0a',
+    image: '../images/zelda.jpg',
     sectionId: '#adventure-section'
   },
   {
     title: 'HORROR',
-    image: 'https://bethelbearfacts.com/wp-content/uploads/2023/12/06-fnf-dm-mobile-banner-1080x745-n-kr-f01-101923-653b04bb19230-1.jpeg',
+    image: '../images/freddy.jpeg',
     sectionId: '#horror-section'
   },
   {
     title: 'RACING',
-    image: 'https://www.godisageek.com/wp-content/uploads/forza-horizon-4-1024x576.jpg',
+    image: '../images/forza.jpg',
     sectionId: '#racing-section'
   }
 ];
@@ -88,6 +88,20 @@ function prevSlide() {
 
 document.getElementById('next').addEventListener('click', nextSlide);
 document.getElementById('prev').addEventListener('click', prevSlide);
+
+// Auto-scroll mini galleries (optional and simple)
+document.querySelectorAll('.gallery-track').forEach(track => {
+  const images = track.querySelectorAll('img');
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000); // 3 seconds per image
+});
+
+
+
 
 // Auto-slide
 setInterval(nextSlide, 5000);
