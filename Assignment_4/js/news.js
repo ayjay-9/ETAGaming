@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-        hamburger.classList.toggle('active');
-    });
+  hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
+  });
 
   function updateSlides() {
     slides.forEach((slide, i) => {
