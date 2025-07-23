@@ -1,13 +1,13 @@
-* {
+/* * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   padding: 0;
   background: #f9f9f9;
-}
+} */
 
 .container {
   max-width: 600px;
