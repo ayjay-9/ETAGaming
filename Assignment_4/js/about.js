@@ -29,13 +29,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             aboutVision.classList.remove('visible');
         } else {
             locations.classList.remove('visible');
-<<<<<<< HEAD
-            // aboutMissionVision.classList.add('visible');
-            // aboutMission.classList.add('visible');
-            // aboutVision.classList.add('visible');
-||||||| empty tree
-=======
->>>>>>> 67f78233167e11e3577b761e9766b6efa9af0144
         }
     }
 
