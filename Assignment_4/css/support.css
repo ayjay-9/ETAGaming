@@ -18,6 +18,27 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+#counter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials {
+  max-width: 100%;
+  fill: #007BFF;
+}
+
+.socials:hover {
+  fill: #0056b3;
+  scale: 1.2;
+}
+
+.counter {
+  color: #007BFF;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.2); /* subtle shadow for depth */
+}
+
 h2, h3 {
   text-align: center;
   color: #333;

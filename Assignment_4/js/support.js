@@ -5,6 +5,40 @@ const previewContent = document.getElementById("previewContent");
 const editBtn = document.getElementById("editBtn");
 const deleteBtn = document.getElementById("deleteBtn");
 
+// Select all elements with the class 'counter'
+const counters = document.querySelectorAll('.counter')
+
+// Loop through each counter element
+counters.forEach(counter => {
+  // Start each counter at 0
+  counter.innerText = '0'
+
+  // Function to increment the counter gradually
+  const updateCounter = () => {
+    // Get the target number from the data-target attribute
+    const target = +counter.getAttribute('data-target')
+    // Get the current value of the counter (convert from string to number)
+    const c = +counter.innerText
+
+    // Calculate how much to increment by (adjust divisor to control speed)
+    const increment = target / 175;
+
+    // If the current value is less than the target, update it
+    if (c < target) {
+      // Increase the counter and round it up
+      counter.innerText = `${Math.ceil(c + increment)}`
+      // Call updateCounter again after 1 millisecond
+      setTimeout(updateCounter, 1)
+    } else {
+      // Once the counter reaches the target, set it exactly to the target value
+      counter.innerText = target
+    }
+  }
+
+  // Start updating this counter
+  updateCounter()
+})
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
