@@ -56,106 +56,117 @@
 }
 
 /* ----------------------------------------------------------------- */
-.hidden-information h2{
-    border: 1px solid black;
-    font-size: 10vw;
-    margin: 0;
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;   
+  height: 100vh;        
+  overflow-x: auto;     
+  scroll-behavior: smooth; 
 }
 
-.hidden-information2{
-    min-height: 100vh;
+.card-container {
+  flex: 0 0 33.33%;      
+  height: 100vh;     
+  box-sizing: border-box;
+  padding: 1.5rem;
+  scroll-snap-align: start; 
 }
 
-.hidden-information2 h2{
-    border: 1px solid black;
-    font-size: 10vw;
-    margin: 0;
+.card {
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  border-radius: 12px;
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+  box-sizing: border-box;
 }
 
-h3{
-    display: flex;
-    font-size: 2.5rem;
-    justify-content: center;
-    border: 1px solid black;
+.card h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #f9a825;
+  text-shadow: 0 0 8px #f9a825aa;
+  flex-shrink: 0;
 }
 
-.hidden-right p{
-    font-size: 2.5rem;
-    border: 1px solid black;
+.card img {
+  width: 100%;
+  max-height: 50vh;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+  transition: transform 0.4s ease;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  object-position: center top;
 }
 
-.genre-adventure{
-    height: 100vh;
+.card img:hover {
+  transform: scale(1.05);
 }
 
-.genre-simulation{
-    height: 100vh;
+.card p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #ddd;
+  flex-grow: 1; 
+  overflow-y: auto; 
+  margin-bottom: 1.5rem;
 }
 
-.genre-rpg{
-    height: 100vh;
+.card button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: white;
+  background-color: #6225E6;
+  padding: 15px 45px;
+  border: none;
+  border-radius: 0;
+  transform: skewX(-15deg);
+  box-shadow: 6px 6px 0 black;
+  cursor: pointer;
+  transition: all 0.4s ease;
 }
 
-.genre-strategy{
-    height: 100vh;
+.card button:hover {
+  box-shadow: 10px 10px 0 blue;
+  transform: skewX(-15deg) scale(1.05);
 }
 
-.genre-sports{
-    height: 100vh;
+.card button:focus {
+  outline: none;
 }
 
-.genre-horror{
-    height: 100vh;
+#austine-card h2{
+  color: #6225E6;
 }
 
-footer{
-    height: 100vh;
+#austine-card button {
+  background-color: #6225E6;
+  color: white;
 }
 
-.adventure-gamecard,
-.simulation-gamecard,
-.rpg-gamecard,
-.sports-gamecard,
-.horror-gamecard,
-.strategy-gamecard {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    scroll-behavior: auto;
-    gap: 16px;
+#emmanuel-card h2{
+  color: #FBC638;
 }
 
-.adventure-gamecard::-webkit-scrollbar,
-.simulation-gamecard::-webkit-scrollbar,
-.rpg-gamecard::-webkit-scrollbar,
-.sports-gamecard::-webkit-scrollbar,
-.horror-gamecard::-webkit-scrollbar,
-.strategy-gamecard::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+#emmanuel-card button {
+  background-color: #FBC638;
+  color: white;
 }
 
-.adventure-carousel,
-.simulation-gamecard aside,
-.rpg-gamecard aside,
-.sports-gamecard aside,
-.horror-gamecard aside,
-.strategy-gamecard aside {
-    flex: 0 0 auto; /* impede de encolher e mantém lado a lado */
-    width: 250px;
-    background-color: #111;
-    color: white;
-    border-radius: 12px;
-    padding: 1rem;
-    text-align: center;
-    transition: transform 0.3s;
+#thiago-card h2{
+  color: #E63946;
 }
 
-.adventure-carousel img,
-.simulation-gamecard img,
-.rpg-gamecard img,
-.sports-gamecard img,
-.horror-gamecard img,
-.strategy-gamecard img {
-    width: 100%;
-    border-radius: 8px;
+#thiago-card button {
+  background-color: #E63946;
+  color: white;
 }
