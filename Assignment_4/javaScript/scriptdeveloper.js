@@ -18,7 +18,7 @@ function changeCardContent(character) {
       paragraph.textContent = 'Emmanuel has always been passionate about games, with a special love for sports. From a young age in Nigeria, he found joy and excitement on the playing field, whether it was football, basketball, or athletics. Sports fuel his competitive spirit and bring people together, inspiring him to push his limits and foster teamwork wherever he plays.';
     } else if (character === 'thiago') {
       image.src = '/images/developers/thiago/thiago-mage.png';
-      paragraph.textContent - 'Thiago is deeply passionate about games, with a special love for role-playing games (RPGs). He enjoys immersing himself in rich stories and complex worlds where imagination and strategy come alive. For Thiago, RPGs are more than just games—they’re a way to explore different characters, build friendships, and experience epic adventures beyond the ordinary.';
+      paragraph.textContent = 'Thiago is deeply passionate about games, with a special love for role-playing games (RPGs). He enjoys immersing himself in rich stories and complex worlds where imagination and strategy come alive. For Thiago, RPGs are more than just games—they’re a way to explore different characters, build friendships, and experience epic adventures beyond the ordinary.';
     }
   } else {
     if (character === 'austine') {
@@ -29,7 +29,7 @@ function changeCardContent(character) {
       paragraph.textContent = 'Emmanuel is a young man from Nigeria, known for his warm spirit and strong determination. Growing up surrounded by vibrant culture and rich traditions, he carries with him a deep sense of pride and resilience. Passionate about learning and connecting with others, Emmanuel strives to make a positive impact wherever he goes.';
     } else if (character === 'thiago') {
       image.src = '/images/developers/thiago/WhatsApp Image 2025-07-12 at 22.12.31.jpeg';
-      paragraph.textContent - 'Thiago is a vibrant young man from Brazil, full of energy and creativity. Growing up amidst Brazil’s lively culture and beautiful landscapes, he developed a deep appreciation for music, football, and community. With a warm heart and a curious mind, Thiago embraces life with enthusiasm and a passion for new experiences';
+      paragraph.textContent = 'Thiago is a vibrant young man from Brazil, full of energy and creativity. Growing up amidst Brazil’s lively culture and beautiful landscapes, he developed a deep appreciation for music, football, and community. With a warm heart and a curious mind, Thiago embraces life with enthusiasm and a passion for new experiences';
     }
   }
 
