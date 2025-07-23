@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   window.dispatchEvent(new Event('scroll'));
 });
-
+//----------------------------------------------------------------------------
 //Line to create the carousel 
 const carousels = document.querySelectorAll('.adventure-gamecard, .simulation-gamecard, .rpg-gamecard, .sports-gamecard, .horror-gamecard, .strategy-gamecard');
 
