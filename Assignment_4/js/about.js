@@ -1,11 +1,19 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', (event) => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
     const aboutDescription = document.getElementById('about-description');
     const aboutMissionVision = document.getElementById('about-mission-vision');
     const aboutMission = document.getElementById('about-mission');
     const aboutVision = document.getElementById('about-vision');
     const locations = document.getElementById('locations');
+
+    // Hamburger menu toggle
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        hamburger.classList.toggle('active');
+    });
 
     function checkScroll() {
         const rect = aboutDescription.getBoundingClientRect();
@@ -33,8 +41,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     const world = Globe()
-        .width(800)  // Set your desired width
-        .height(500) // Set your desired height
+        .width(300)
+        .height(300)
         .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
         .pointsData([
             { lat: 51.8894, lng: -8.4942, size: 1, label: 'Griffith College Cork' },

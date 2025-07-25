@@ -294,57 +294,58 @@ footer {
   color: white;
 }
 
-#austine-card{
-  height: 90vh;
+/* media queries */
+
+
+/* Responsive - hide links and show hamburger on small screens */
+@media (max-width: 984px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        width: 200px;
+        padding: 1rem;
+        display: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-#emmanuel-card{
-  height: 97vh;
-}
+/* visible nav on large screens */
+@media (min-width: 985px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
 
-#thiago-card{
-  height: 97vh;
-  margin-bottom: 1.5rem;
-}
-
-#austine-card h2,
-#emmanuel-card h2,
-#thiago-card h2 {
-  font-size: 3rem;
-  position: relative;
-  display: inline-block;
-}
-
-#austine-card h2::after,
-#austine-card h2::before,
-#emmanuel-card h2::after,
-#emmanuel-card h2::before,
-#thiago-card h2::after,
-#thiago-card h2::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, black, #1a5aff);
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s ease-out;
-}
-
-#austine-card h2::before,
-#emmanuel-card h2::before,
-#thiago-card h2::before {
-  top: -5px;
-  transform-origin: left;
-}
-
-#austine-card h2:hover::after,
-#austine-card h2:hover::before,
-#emmanuel-card h2:hover::after,
-#emmanuel-card h2:hover::before,
-#thiago-card h2:hover::after,
-#thiago-card h2:hover::before {
-  transform: scaleX(1);
+    .hamburger {
+        display: none;
+    }
 }

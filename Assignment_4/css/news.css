@@ -358,51 +358,58 @@
 
 
 
-/* media queries for nav */
+/* media queries */
 
-@media (max-width: 839px) {
-  .hamburger {
-    display: flex;
-  }
-  .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #ffffff;
-    width: 200px;
-    padding: 1rem;
-    display: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: none;
-  }
-  #masthead nav ul a{
-    color: #000;
-  }
-  .nav-links.show {
-    display: flex;
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
+
+/* Responsive - hide links and show hamburger on small screens */
+@media (max-width: 984px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        width: 200px;
+        padding: 1rem;
+        display: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* visible nav on large screens */
-@media (min-width: 840px) {
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    background-color: transparent;
-    padding: 0;
-     transform: none !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-  }
+@media (min-width: 985px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
 
-  .hamburger {
-    display: none;
-  }
+    .hamburger {
+        display: none;
+    }
 }
