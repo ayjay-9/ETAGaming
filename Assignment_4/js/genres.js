@@ -126,3 +126,26 @@ document.querySelectorAll('.gallery-track').forEach(track => {
 setInterval(nextSlide, 5000);
 
 updateCarousel();
+//------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+
+  const elements = document.querySelectorAll('.hidden');
+
+  window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+      // To get the position of the element on top
+      const elementTop = el.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      // If the top is at 2/3 from the windon it appears
+      if (elementTop < windowHeight * 0.66) {
+        // To add a class which make the element visible
+        el.classList.add('visible');
+      } else {
+        // To remove the class to have the same effect again
+        el.classList.remove('visible');
+      }
+    });
+  });
+  window.dispatchEvent(new Event('scroll'));
+});
