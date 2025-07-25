@@ -14,14 +14,17 @@ body {
 #masthead {
     background-color: white;
     width: 100%;
-    position: static;
+    position: relative;
     top: 0;
     display: flex;
     /* flex-wrap: wrap; */
     align-items: center;
-    justify-content: space-between; /* Push nav to the right */
-    z-index: 10; /* Ensures it stays above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    justify-content: space-between;
+    /* Push nav to the right */
+    z-index: 10;
+    /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow for depth */
 }
 
 .home-page-icon {
@@ -29,8 +32,10 @@ body {
 }
 
 #masthead nav {
-    margin-left: auto; /* Ensures nav stays at the far right */
-    margin-right: 1%; /* Adds some space from the right edge */
+    margin-left: auto;
+    /* Ensures nav stays at the far right */
+    margin-right: 1%;
+    /* Adds some space from the right edge */
 }
 
 #masthead nav ul {
@@ -53,7 +58,8 @@ body {
 #masthead nav ul a span {
     display: inline-block;
     transition: transform 0.01s;
-    padding: 7px 15px; /* Add padding to the text */
+    padding: 7px 15px;
+    /* Add padding to the text */
 }
 
 #masthead nav ul a:hover {
@@ -63,44 +69,47 @@ body {
 }
 
 #masthead nav ul a:hover span {
-    transform: skewX(20deg); /* Unskew the text */
+    transform: skewX(20deg);
+    /* Unskew the text */
 }
 
 /* hamburger menu styling */
 .hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  cursor: pointer;
-  z-index: 1001;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 .nav-links {
-  transition: all 0.3s ease-in-out;
-  display: none; /* start hidden */
-  flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    display: none;
+    /* start hidden */
+    flex-direction: column;
 }
+
 /* making the burger menu an x */
 .bar {
-  height: 4px;
-  width: 100%;
-  background-color: black;
-  transition: all 0.3s ease;
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    transition: all 0.3s ease;
 }
 
 /* Toggle animation: Hamburger to X */
 .hamburger.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 .hamburger.active .bar:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .hamburger.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 
@@ -108,7 +117,7 @@ body {
 footer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
     position: relative;
     bottom: 0;
     background-color: white;
@@ -161,7 +170,7 @@ footer {
     text-align: center;
 }
 
-.footer-bottom-left{
+.footer-bottom-left {
     grid-column-start: 1;
     grid-row-start: 2;
     font-size: 12px;
@@ -214,7 +223,7 @@ footer {
         opacity: 1;
         pointer-events: auto;
     }
-    
+
     footer {
         display: flex;
         flex-direction: column;

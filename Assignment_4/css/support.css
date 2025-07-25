@@ -1,19 +1,10 @@
-/* * {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-} */
-
-/* body {
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-} */
-
 .container {
-  max-width: 600px;
+  position: relative;
+  max-width: 50%;
+  max-height: auto;
   margin: 40px auto;
   background: #fff;
-  padding: 30px;
+  padding: 40px 70px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -25,7 +16,7 @@
 }
 
 .socials {
-  max-width: 100%;
+  max-width: 75%;
   fill: #007BFF;
 }
 
@@ -37,6 +28,28 @@
 .counter {
   color: #007BFF;
   text-shadow: 0px 2px 4px rgba(0,0,0,0.2); /* subtle shadow for depth */
+}
+
+#message-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.floating-message {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #3CA9E2;
+    position: absolute;
+    bottom: 20px;
+    font-size: 1rem;
+    padding: 20px 20px;
+    width: 300px;
+    opacity: 1;
+    animation: floatUp 7s ease-out forwards;
 }
 
 h2, h3 {
@@ -88,14 +101,14 @@ textarea {
 .btn {
   width: 100%;
   padding: 12px;
-  background: #007BFF;
+  background-color: #007BFF;
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -136,8 +149,24 @@ textarea {
   background: #fafafa;
 }
 
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
 /* media queries */
 
+@media screen and (width < 1545px) {
+  #message-container {
+    display: none;
+  }
+}
 
 /* Responsive - hide links and show hamburger on small screens */
 @media (max-width: 984px) {
@@ -165,6 +194,11 @@ textarea {
         transform: translateX(0);
         opacity: 1;
         pointer-events: auto;
+    }
+
+    .counter {
+        font-size: smaller;
+        padding: 0 5px;
     }
     
     footer {

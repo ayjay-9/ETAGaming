@@ -1,10 +1,19 @@
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+// Hamburger menu toggle
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  hamburger.classList.toggle('active');
+});
+
 const toggledStates = {
   austine: false,
   emmanuel: false,
   thiago: false
 };
 
-window.changeCardContent = function(character) {
+window.changeCardContent = function (character) {
   const card = document.getElementById(`${character}-card`);
   const image = card.querySelector('img');
   const paragraph = card.querySelector('p');
