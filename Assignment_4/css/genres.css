@@ -114,12 +114,13 @@ html {
   height: 12px;
   border-radius: 50%;
   border: none;
-  background: #777;
+  background: #ffffff;
   cursor: pointer;
+  animation: pulseGlow 1.5s infinite ease-in-out;
 }
 
 .indicators button.active {
-  background: #fff;
+  background: #3CA9E2;
 }
 
 
@@ -220,6 +221,11 @@ html {
     pointer-events: auto;
   }
 
+  /* slides images */
+  .slide-img {
+    object-fit: contain; 
+}
+
   footer {
     display: flex;
     flex-direction: column;
@@ -242,5 +248,21 @@ html {
 
   .hamburger {
     display: none;
+  }
+}
+
+/* color effect for hamburger menu */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+                0 0 20px rgba(0, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7),
+                0 0 30px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+                0 0 20px rgba(0, 255, 255, 0.4);
   }
 }
