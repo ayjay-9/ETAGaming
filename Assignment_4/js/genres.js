@@ -48,7 +48,12 @@ let currentIndex = 0;
 slidesData.forEach((slide, index) => {
   const slideDiv = document.createElement('div');
   slideDiv.className = 'slide';
-  slideDiv.style.backgroundImage = `url(${slide.image})`;
+  // changed to img instead to give more control of the images positioning and sizing
+  const img = document.createElement('img');
+  img.src = slide.image;
+  img.alt = slide.title;
+  img.className = 'slide-img';
+  slideDiv.appendChild(img);;
 
   const content = document.createElement('div');
   content.className = 'slide-content';
