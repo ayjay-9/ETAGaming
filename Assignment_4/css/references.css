@@ -1,0 +1,59 @@
+body {
+    margin: 0 auto;
+    background: linear-gradient(to right, #000, #1a5aff);
+    width: 100%;
+    font-family: 'Bebas Neue', 'Poppins', sans-serif;
+    font-weight: bolder;
+    height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.5s ease;
+  height: 100%;
+}
+
+#footer {
+    position: fixed;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.reference-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.reference-list li {
+  margin-bottom: 10px;
+}
+
+.reference-list a {
+  text-decoration: none;
+  color: #007BFF;
+  transition: 0.2s ease;
+}
+
+.reference-list a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
