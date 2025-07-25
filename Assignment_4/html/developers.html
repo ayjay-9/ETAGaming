@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETA Gaming | developers</title>
-    <!-- <link rel="stylesheet" href="../css/main.css"> -->
     <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/support.js" defer></script>
+    <link rel="stylesheet" href="../css/developers.css">
+    <script src="../js/developer.js" defer></script>
 </head>
 
 <body>
@@ -34,36 +34,71 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
+    <div class="cards-wrapper">
+        <div class="card-container">
+            <div class="card" id="austine-card">
+                <h2>Austine</h2>
+                <img src="/images/developers/austine/austin.jpeg">
+                <p>A man born in the land of Eldamar. He is a dreamer and a beloved from the depths of the heart. His
+                    coming was in a bright moment, like stars shining. He is a brave and faithful man, who leaves the
+                    good to seek love in all darkness.</p>
+                <button onclick="changeCardContent('austine')">Button</button>
+            </div>
+        </div>
 
-        <footer id=" footer">
-            <div class="footer-logo">
-                <img src="../images/home-page-icon.png" alt="ETA GAMING Logo">
+        <div class="card-container">
+            <div class="card" id="emmanuel-card">
+                <h2>Emmanuel</h2>
+                <img src="/images/developers/emmanuel/emmanuel.jpeg">
+                <p>Emmanuel is a young man from Nigeria, known for his warm spirit and strong determination. Growing up
+                    surrounded by vibrant culture and rich traditions, he carries with him a deep sense of pride and
+                    resilience. Passionate about learning and connecting with others, Emmanuel strives to make a
+                    positive impact wherever he goes.</p>
+                <button onclick="changeCardContent('emmanuel')">Button</button>
             </div>
-            <div class="footer-bottom-left">
-                <p>&copy; All Rights Reserved @ETAGAMING</p>
+        </div>
+
+        <div class="card-container">
+            <div class="card" id="thiago-card">
+                <h2>Thiago</h2>
+                <img src="/images/developers/thiago/thiago.jpeg">
+                <p>Thiago is a vibrant young man from Brazil, full of energy and creativity. Growing up amidst Brazil’s
+                    lively culture and beautiful landscapes, he developed a deep appreciation for music, football, and
+                    community. With a warm heart and a curious mind, Thiago embraces life with enthusiasm and a passion
+                    for new experiences.</p>
+                <button onclick="changeCardContent('thiago')">Button</button>
             </div>
-            <div class="footer-names">
-                <p>AUSTINE</p>
-                <p>THIAGO</p>
-                <p>EMMANUEL</p>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-logo">
+            <img src="../images/home-page-icon.png" alt="ETA GAMING Logo">
+        </div>
+        <div class="footer-bottom-left">
+            <p>&copy; All Rights Reserved @ETAGAMING</p>
+        </div>
+        <div class="footer-names">
+            <p>AUSTINE</p>
+            <p>THIAGO</p>
+            <p>EMMANUEL</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><img src="../icons/facebook-app-symbol.png" alt="Facebook"></a>
+            <a href="#"><img src="../icons/twitter-black-shape.png" alt="Twitter"></a>
+            <a href="#"><img src="../icons/youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="../icons/twitch.png" alt="Twitch"></a>
+        </div>
+        <!-- <div class="footer-divider"></div> -->
+        <div class="footer-bottom-right">
+            <!-- <p>&copy; All Rights Reserved @ETAGAMING</p> -->
+            <div class="footer-links">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICES</a>
+                <a href="#">CODE OF CONDUCT</a>
             </div>
-            <div class="footer-socials">
-                <a href="#"><img src="../icons/facebook-app-symbol.png" alt="Facebook"></a>
-                <a href="#"><img src="../icons/twitter-black-shape.png" alt="Twitter"></a>
-                <a href="#"><img src="../icons/youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="../icons/twitch.png" alt="Twitch"></a>
-            </div>
-            <!-- <div class="footer-divider"></div> -->
-            <div class="footer-bottom-right">
-                <!-- <p>&copy; All Rights Reserved @ETAGAMING</p> -->
-                <div class="footer-links">
-                    <a href="#">PRIVACY POLICY</a>
-                    <a href="#">TERMS OF SERVICES</a>
-                    <a href="#">CODE OF CONDUCT</a>
-                </div>
-            </div>
-        </footer>
+        </div>
+    </footer>
     </div>
 </body>
 

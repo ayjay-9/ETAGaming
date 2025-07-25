@@ -1,28 +1,33 @@
 const slidesData = [
   {
-    title: 'SCI-FI',
-    image: '../images/callofduty.jpg',
-    sectionId: '#sci-fi-section'
-  },
-  {
-    title: 'ACTION',
-    image: '../images/Batman.webp',
-    sectionId: '#action-section'
-  },
-  {
     title: 'ADVENTURE',
-    image: '../images/zelda.jpg',
+    image: '../images/tlu-background.jpg',
     sectionId: '#adventure-section'
   },
   {
     title: 'HORROR',
-    image: '../images/freddy.jpeg',
+    image: '../images/alan-wake-2-background.jpg',
     sectionId: '#horror-section'
   },
   {
-    title: 'RACING',
-    image: '../images/forza.jpg',
+    title: 'SPORTS',
+    image: '../images/forza-background.jpg',
     sectionId: '#racing-section'
+  },
+  {
+    title: 'STRATEGY',
+    image: '../images/rainbow-background.jpg',
+    sectionId: '#strategy-section'
+  },
+  {
+    title: 'RPG',
+    image: '../images/expedition-background.png',
+    sectionId: '#rpg-section'
+  },
+  {
+    title: 'SIMULATION',
+    image: '../images/gta-background.webp',
+    sectionId: '#simulation-section'
   }
 ];
 
