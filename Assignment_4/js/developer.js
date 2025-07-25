@@ -12,7 +12,7 @@ window.changeCardContent = function(character) {
   if (!toggledStates[character]) {
     if (character === 'austine') {
       image.src = '/images/developers/austine/austin-yasuo.png';
-      paragraph.textContent = 'Austine loves the art of games. Since childhood, playing was a joy from his heart, and now the time is joyful like a night in the winds. He is skilled and praises his games, for giving joy that can be seen like the shaping of the world. May games never fade – they are part of his home and soul.';
+      paragraph.textContent = 'Austine loves the art of games. Since childhood, playing was a joy from his heart, and now the time is joyful like a night in the winds. He is skilled and praises his games, for giving joy that can be seen like the shaping of the world.';
     } else if (character === 'emmanuel') {
       image.src = '/images/developers/emmanuel/emmanuel-player.png';
       paragraph.textContent = 'Emmanuel has always been passionate about games, with a special love for sports. From a young age in Nigeria, he found joy and excitement on the playing field, whether it was football, basketball, or athletics. Sports fuel his competitive spirit and bring people together, inspiring him to push his limits and foster teamwork wherever he plays.';
