@@ -1,91 +1,86 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0 auto;
-    width: 100%;
-    font-family: 'Bebas Neue', 'Poppins', sans-serif;
-    font-weight: bolder;
-    background: linear-gradient(to right, black, #1a5aff);
-    overflow-y: auto;
-}
-
-#container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-    grid-template-areas:
-        "header header"
-        "main main"
-        "footer footer";
-}
-
-/* Assign grid areas */
-header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-}
-
-aside {
-    grid-area: aside;
-}
-
-footer {
-    grid-area: footer;
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Bebas Neue', 'Poppins', sans-serif;
+  font-weight: bolder;
+  background: linear-gradient(to right, black, #1a5aff);
 }
 
 .cards-wrapper {
   display: flex;
-  flex-direction: column;         
-  overflow-x: auto;  
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
 }
 
 .card-container {
-  height: 100vh;
-  flex: 0 0 33.33%;          
-  box-sizing: border-box;
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  scroll-snap-align: start; 
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .card {
+  width: 100%;
+  max-width: 600px;
   background-color: white;
-  border-radius: 12px;  
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem;
   box-shadow: 0 8px 24px rgba(0,0,0,0.8);
   box-sizing: border-box;
-  margin: 0 10rem 0 10rem;
-  margin-bottom: 2rem;
 }
 
 .card h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #f9a825;
   text-shadow: 0 0 8px #f9a825aa;
-  flex-shrink: 0;
-  margin-top: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.card h2::before,
+.card h2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, black, #1a5aff);
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-out;
+}
+
+.card h2::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.card h2::after {
+  bottom: -5px;
+  transform-origin: right;
+}
+
+.card h2:hover::before,
+.card h2:hover::after {
+  transform: scaleX(1);
 }
 
 .card img {
-  max-height: 50vh;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 20%;
+  margin: 1rem auto;
   object-fit: cover;
-  /* margin-bottom: 1.5rem; */
+  object-position: center;
   box-shadow: 0 4px 15px rgba(255,255,255,0.2);
-  flex-shrink: 0;
-  margin-left: auto;
-  margin-right: auto;
-  object-fit: cover;
-  object-position: center top;
-  transition: all 0.4s ease;
-
+  transition: transform 0.4s ease;
 }
 
 .card img:hover {
@@ -93,128 +88,69 @@ footer {
 }
 
 .card p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   color: black;
-  flex-grow: 1; 
-  overflow-y: auto; 
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin: 1rem 0;
+  text-align: justify;
 }
 
 .card button {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: white;
   background-color: #6225E6;
-  padding: 15px 45px;
+  padding: 12px 30px;
   border: none;
   border-radius: 0;
   transform: skewX(-15deg);
   box-shadow: 6px 6px 0 black;
   cursor: pointer;
-  transition: all 0.4s ease;
+  align-self: center;
+  transition: all 0.3s ease;
 }
 
 .card button:hover {
   box-shadow: 10px 10px 0 blue;
-  transform: skewX(-15deg) scale(1.00);
+  transform: skewX(-15deg) scale(1.03);
 }
 
 .card button:focus {
   outline: none;
 }
 
-#austine-card h2{
-  color: #6225E6;
-  padding: 1rem;
-  margin-right: auto;
-  margin-bottom: 0;
-}
+/* Developer-specific colors */
+#austine-card h2 { color: #6225E6; }
+#austine-card button { background-color: #6225E6; }
 
-#austine-card button {
-  background-color: #6225E6;
-  color: white;
-}
+#emmanuel-card h2 { color: #FBC638; }
+#emmanuel-card button { background-color: #FBC638; }
 
-#emmanuel-card h2{
-  color: #FBC638;
-  padding: 1rem;
-  margin-right: auto;
-  margin-bottom: 0;
+#thiago-card h2 { color: #E63946; }
+#thiago-card button { background-color: #E63946; }
 
-}
+/* Responsive Tweaks */
+@media screen and (max-width: 600px) {
+  .card {
+    padding: 1rem;
+  }
 
-#emmanuel-card button {
-  background-color: #FBC638;
-  color: white;
-}
+  .card h2 {
+    font-size: 2rem;
+  }
 
-#thiago-card h2{
-  color: #E63946;
-  padding: 1rem;
-  margin-right: auto;
-  margin-bottom: 0;
-}
+  .card p {
+    font-size: 1.1rem;
+  }
 
-#thiago-card button {
-  background-color: #E63946;
-  color: white;
-}
+  .card button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
 
-#austine-card{
-    height: 90vh;
+  .card img {
+    max-width: 100%;
+  }
 }
-
-#emmanuel-card{
-    height: 95vh;
-}
-
-#thiago-card{
-    height: 95vh;
-}
-
-#austine-card h2,
-#emmanuel-card h2,
-#thiago-card h2 {
-  font-size: 2rem;
-  position: relative;
-  display: inline-block;
-}
-
-#austine-card h2::after,
-#austine-card h2::before,
-#emmanuel-card h2::after,
-#emmanuel-card h2::before,
-#thiago-card h2::after,
-#thiago-card h2::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, black, #1a5aff);
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s ease-out;
-}
-
-#austine-card h2::before,
-#emmanuel-card h2::before,
-#thiago-card h2::before {
-  top: -5px;
-  transform-origin: left;
-}
-
-#austine-card h2:hover::after,
-#austine-card h2:hover::before,
-#emmanuel-card h2:hover::after,
-#emmanuel-card h2:hover::before,
-#thiago-card h2:hover::after,
-#thiago-card h2:hover::before {
-  transform: scaleX(1);
-}
-/* media queries */
