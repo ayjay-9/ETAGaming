@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '../images/Batman.jpg',
         '../images/EA-FC-25-Premier-League-POTM-.avif',
         '../images/zelda.jpg',
-        '../images/forza.jpg',
+        '../images/forza-background.jpg',
         '../images/NBA2k25.jpg',
         '../images/mortal-kombat.jpg',
     ];
