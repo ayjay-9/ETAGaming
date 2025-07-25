@@ -1,84 +1,105 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Group Assignment</title>
-    <script src="../js/developer.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ETA Gaming | developers</title>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/developers.css">
+    <script src="../js/developer.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
-        <header id="masthead">
-            <a href="./developer.html">
-                <img src="/images/home-page-icon.png" class="home-page-icon" alt="ETA Logo">
-            </a>
-            <p>ETA Gaming</p>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="genres.html">Genres</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="support.html">Contact Us</a></li>
-                    <li><a href="#">References</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+    <header id="masthead">
+        <a href="./home.html">
+            <img src="../images/home-page-icon.png" class="home-page-icon" alt="ETA Logo">
+        </a>
+        <p>ETA Gaming</p>
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="./home.html"><span>HOME</span></a></li>
+                <li><a href="./genres.html"><span>GENRES</span></a></li>
+                <li><a href="./events.html"><span>EVENTS</span></a></li>
+                <li><a href="./about.html"><span>ABOUT</span></a></li>
+                <li><a href="./news.html"><span>NEWS</span></a></li>
+                <li><a href="./developers.html"><span>DEVELOPERS</span></a></li>
+                <li><a href="./support.html"><span>SUPPORT</span></a></li>
+                <li><a href="#"><span>REFERENCES</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cards-wrapper">
+        <div class="card-container">
+            <div class="card" id="austine-card">
+                <h2>Austine</h2>
+                <img src="/images/developers/austine/austin.jpeg">
+                <p>A man born in the land of Eldamar. He is a dreamer and a beloved from the depths of the heart. His
+                    coming was in a bright moment, like stars shining. He is a brave and faithful man, who leaves the
+                    good to seek love in all darkness.</p>
+                <button onclick="changeCardContent('austine')">Button</button>
+            </div>
+        </div>
 
-<div class="cards-wrapper">
-    <div class="card-container">
-        <div class="card" id="austine-card">
-            <h2>Austine</h2>
-            <img src="/images/developers/austine/austin.jpeg">
-            <p>A man born in the land of Eldamar. He is a dreamer and a beloved from the depths of the heart. His coming was in a bright moment, like stars shining. He is a brave and faithful man, who leaves the good to seek love in all darkness.</p>
-            <button onclick="changeCardContent('austine')">Button</button>
+        <div class="card-container">
+            <div class="card" id="emmanuel-card">
+                <h2>Emmanuel</h2>
+                <img src="/images/developers/emmanuel/emmanuel.jpeg">
+                <p>Emmanuel is a young man from Nigeria, known for his warm spirit and strong determination. Growing up
+                    surrounded by vibrant culture and rich traditions, he carries with him a deep sense of pride and
+                    resilience. Passionate about learning and connecting with others, Emmanuel strives to make a
+                    positive impact wherever he goes.</p>
+                <button onclick="changeCardContent('emmanuel')">Button</button>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card" id="thiago-card">
+                <h2>Thiago</h2>
+                <img src="/images/developers/thiago/thiago.jpeg">
+                <p>Thiago is a vibrant young man from Brazil, full of energy and creativity. Growing up amidst Brazil’s
+                    lively culture and beautiful landscapes, he developed a deep appreciation for music, football, and
+                    community. With a warm heart and a curious mind, Thiago embraces life with enthusiasm and a passion
+                    for new experiences.</p>
+                <button onclick="changeCardContent('thiago')">Button</button>
+            </div>
         </div>
     </div>
 
-    <div class="card-container">
-        <div class="card" id="emmanuel-card">
-            <h2>Emmanuel</h2>
-            <img src="/images/developers/emmanuel/emmanuel.jpeg">
-            <p>Emmanuel is a young man from Nigeria, known for his warm spirit and strong determination. Growing up surrounded by vibrant culture and rich traditions, he carries with him a deep sense of pride and resilience. Passionate about learning and connecting with others, Emmanuel strives to make a positive impact wherever he goes.</p>
-            <button onclick="changeCardContent('emmanuel')">Button</button>
+    <footer id="footer">
+        <div class="footer-logo">
+            <img src="../images/home-page-icon.png" alt="ETA GAMING Logo">
         </div>
-    </div>
-
-    <div class="card-container">
-        <div class="card" id="thiago-card">
-            <h2>Thiago</h2>
-            <img src="/images/developers/thiago/thiago.jpeg">
-            <p>Thiago is a vibrant young man from Brazil, full of energy and creativity. Growing up amidst Brazil’s lively culture and beautiful landscapes, he developed a deep appreciation for music, football, and community. With a warm heart and a curious mind, Thiago embraces life with enthusiasm and a passion for new experiences.</p>
-            <button onclick="changeCardContent('thiago')">Button</button>
+        <div class="footer-bottom-left">
+            <p>&copy; All Rights Reserved @ETAGAMING</p>
         </div>
-    </div>
-</div>
-        <footer id="footer">
-        <div>
-            <p>&copy;ETA Gaming</p>
+        <div class="footer-names">
+            <p>AUSTINE</p>
+            <p>THIAGO</p>
+            <p>EMMANUEL</p>
         </div>
-
-        <div>
-            <p>Emmanuel Ayobanjo</p>
-            <p>3173959</p>
-            <p><a href="mailto:emmanuelayomikun.ayobanjo@student.griffith.ie">Email Me</a></p>
+        <div class="footer-socials">
+            <a href="#"><img src="../icons/facebook-app-symbol.png" alt="Facebook"></a>
+            <a href="#"><img src="../icons/twitter-black-shape.png" alt="Twitter"></a>
+            <a href="#"><img src="../icons/youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="../icons/twitch.png" alt="Twitch"></a>
         </div>
-
-        <div>
-            <p>Thiago Barbosa</p>
-            <p>3185934</p>
-            <p><a href="mailto:thiago.dasilvabarbosa@student.griffith.ie">Email Me</a></p>
-        </div>
-
-        <div>
-            <p>Austine Biketi</p>
-            <p>3178096</p>
-            <p><a href="mailto:austinebiketi.naulikha@student.griffith.ie">Email Me</a></p>
+        <!-- <div class="footer-divider"></div> -->
+        <div class="footer-bottom-right">
+            <!-- <p>&copy; All Rights Reserved @ETAGAMING</p> -->
+            <div class="footer-links">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICES</a>
+                <a href="#">CODE OF CONDUCT</a>
+            </div>
         </div>
     </footer>
     </div>
 </body>
+
 </html>

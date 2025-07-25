@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ETA Gaming | About</title>
+    <title>ETA Gaming | Events</title>
     <link rel="stylesheet" href="../css/events.css">
-    <script src="https://unpkg.com/three@0.121.1/build/three.min.js"></script>
-    <script src="https://unpkg.com/globe.gl"></script>
-    <script src="../js/about.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="../js/events.js" defer></script>
 </head>
 
 <body>
@@ -38,118 +38,432 @@
         </header>
 
         <main>
-            <section id="about-content">
-                <header>
-                    <h1>
-                        About ETA Gaming
-                    </h1>
-                </header>
+            <section class="events-welcome-page">
+                <img src="../images/Event_Background_Image/apex-legends-background.png" class="events-background"
+                    alt="Apex Legends Event Background Picture">
+                <section class="discover-events">
+                    <p>Upcoming Events</p>
+                    <a href="#event-list" class="discover-events-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="discover-events-arrow" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            <path fill-rule="evenodd"
+                                d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </a>
+                </section>
             </section>
 
-            <section id="about-description">
-                <p>
-                    We are ETA Gaming — a digital hub created by gamers, for gamers.
-                    Our mission is to craft immersive, community-driven experiences that unite players across genres and
-                    platforms. Whether you're a casual explorer, competitive strategist, or retro pixel lover, ETA
-                    Gaming is your next destination.
-                </p>
-                <p>
-                    Founded in 2024 as a student-led initiative, ETA Gaming began with a bold vision: to connect people
-                    through play, creativity, and collaboration. From late-night game jams and UI experiments to a
-                    growing platform for gamers worldwide, we celebrate the diversity and passion that defines gaming
-                    culture.
-                </p>
-                <p>
-                    Our coverage spans everything from new game releases and developer spotlights to industry trends and
-                    live gaming events. With a team of dedicated gamers and storytellers, we deliver content that’s
-                    insightful, authentic, and built with players in mind.
-                </p>
-                <p>
-                    Whether you’re just starting your gaming journey or deep in the high-score chase, ETA Gaming has
-                    something for everyone.
-                </p>
-                <p>
-                    Let's explore the evolving world of gaming, together.
-                </p>
-            </section>
+            <section id="event-list">
+                <div class="event-card">
+                    <img src="../images/fortnite.png" alt="Fortnite Event">
+                    <section class="event-details">
+                        <h1>Fortnite Battle Royale</h1>
+                        <p class="event-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                                <path
+                                    d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg><br>
+                            August 15, 2025 – 6:00 PM GMT
+                        </p>
+                        <a href="#learn-more-fortnite" class="learn-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </section>
+                </div>
 
-            <div id="about-mission-vision">
-                <section id="about-mission">
-                    <h2>Our Mission</h2>
-                    <p>
-                        "At ETA Gaming, our mission is to create a vibrant community where gamers can connect, share, and
-                        explore the world of gaming together. We strive to provide a platform that celebrates the
-                        diversity
-                        of gaming experiences and fosters a sense of belonging among players."
+                <div class="event-card">
+                    <img src="../images/callofduty.jpg" alt="Call of Duty Event">
+                    <section class="event-details">
+                        <h1>Call of Duty: Black Ops 6</h1>
+                        <p class="event-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                                <path
+                                    d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg><br>
+                            August 22, 2025 – 12:00 PM GMT
+                        </p>
+                        <a href="#" class="learn-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </section>
+                </div>
+
+                <div class="event-card">
+                    <img src="../images/Batman.jpg" alt="Apex Legends Event">
+                    <section class="event-details">
+                        <h1>Batman Arkham Knight</h1>
+                        <p class="event-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                                <path
+                                    d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg><br>
+                            August 29, 2025 – 3:00 PM GMT
+                        </p>
+                        <a href="#" class="learn-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </section>
+                </div>
+
+                <div class="event-card">
+                    <img src="../images/EA-FC-25-Premier-League-POTM-.avif" alt="Overwatch Event">
+                    <section class="event-details">
+                        <h1>EA Sports FC 25</h1>
+                        <p class="event-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                                <path
+                                    d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg><br>
+                            August 5, 2025 – 4:00 PM GMT
+                        </p>
+                        <a href="#" class="learn-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </section>
+                </div>
+
+                <div class="event-card">
+                    <img src="../images/zelda.jpg" alt="Valorant Event">
+                    <section class="event-details">
+                        <h1>The Legend of Zelda</h1>
+                        <p class="event-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                                <path
+                                    d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg><br>
+                            August 12, 2025 – 5:00 PM GMT
+                        </p>
+                        <a href="#" class="learn-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </section>
+                </div>
+
+                <div class="event-card">
+                    <img src="../images/forza-background.jpg" alt="League of Legends Event">
+                    <section class="event-details">
+                        <h1>Forza Horizon 4</h1>
+                        <p class="event-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                                <path
+                                    d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg><br>
+                            August 19, 2025 – 2:00 PM GMT
+                        </p>
+                        <a href="#" class="learn-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </section>
+                </div>
+
+                <div class="event-card">
+                    <img src="../images/NBA2k25.jpg" alt="NBA Event">
+                    <section class="event-details">
+                        <h1>NBA 2K25</h1>
+                        <p class="event-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                                <path
+                                    d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg><br>
+                            August 30, 2025 – 7:00 PM GMT
+                        </p>
+                        <a href="#" class="learn-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </section>
+                </div>
+
+                <div class="event-card">
+                    <img src="../images/mortal-kombat.jpg" alt="Mortal Kombat Event">
+                    <section class="event-details">
+                        <h1>Mortal Kombat OG</h1>
+                        <p class="event-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                                <path
+                                    d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg><br>
+                            August 25, 2025 – 8:00 PM GMT
+                        </p>
+                        <a href="#" class="learn-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </section>
+                </div>
+
+                <!-- Pop-ups to learn more info about events-->
+                <section id="learn-more-fortnite" class="popup">
+                    <button class="close-fortnite">X</button>
+                    <img src="../images/fortnite.png" alt="Fortnite Event">
+                    <h2>Fortnite Battle Royale</h2>
+                    <p class="event-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        August 15, 2025 – 6:00 PM GMT | Online
                     </p>
+                    <p>
+                        Jump into the ultimate battle royale experience with Fortnite! Compete against players
+                        worldwide
+                        in a high-octane, action-packed showdown. Gather resources, build epic structures, and
+                        outsmart
+                        opponents to claim the Victory Royale. With cross-platform play, fresh limited-time
+                        modes, and a
+                        constantly evolving arsenal, every match brings new thrills. Squad up or go solo—your
+                        path to
+                        glory starts here!
+                    </p>
+                    <a href="#" class="event-link">RSVP Now</a>
                 </section>
 
-                <section id="about-vision">
-                    <h2>Our Vision</h2>
+                <section id="learn-more-callOfDuty" class="popup">
+                    <button class="close-callOfDuty">X</button>
+                    <img src="../images/callofduty.jpg" alt="Call of Duty Event">
+                    <h2>Call of Duty: Black Ops 6</h2>
+                    <p class="event-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        August 22, 2025 – 12:00 PM GMT | Online
+                    </p>
                     <p>
-                        "Our vision is to be a leading digital hub for gamers, where innovation meets community. We aim
+                        Gear up for the next chapter in the Call of Duty saga with Black Ops 6! Engage in
+                        intense
+                        multiplayer battles, experience a gripping single-player campaign, and dive into the
+                        thrilling
+                        Zombies mode. With new maps, weapons, and game modes, this installment promises to
+                        redefine the
+                        franchise. Join forces with friends or go head-to-head against rivals—your mission
+                        awaits!
+                    </p>
+                    <a href="#" class="event-link">RSVP Now</a>
+                </section>
+
+                <section id="learn-more-batman" class="popup">
+                    <button class="close-batman">X</button>
+                    <img src="../images/Batman.jpg" alt="Batman Event">
+                    <h2>Batman Arkham Knight</h2>
+                    <p class="event-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        August 29, 2025 – 3:00 PM GMT | Online
+                    </p>
+                    <p>
+                        Step into the shadows of Gotham City with Batman Arkham Knight! Experience the epic
+                        conclusion
                         to
-                        inspire and empower gamers of all backgrounds to discover new adventures, forge friendships, and
-                        express their creativity through play."
+                        the Arkham series as you take on the role of the Dark Knight. Unravel a gripping
+                        narrative, face
+                        off against iconic villains, and explore a richly detailed open world. With enhanced
+                        combat and
+                        detective mechanics, this event promises an unforgettable journey through the heart of
+                        Gotham.
                     </p>
+                    <a href="#" class="event-link">RSVP Now</a>
                 </section>
-            </div>
 
-            <div id="locations">
-                <section id="globe-section">
-                    <h2>Our Locations</h2>
-                    <div id="globe-container"></div>
+                <section id="learn-more-eaSports" class="popup">
+                    <button class="close-eaSports">X</button>
+                    <img src="../images/EA-FC-25-Premier-League-POTM-.avif" alt="EA Sports FC 25 Event">
+                    <h2>EA Sports FC 25</h2>
+                    <p class="event-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        August 5, 2025 – 4:00 PM GMT | Online
+                    </p>
+                    <p>
+                        Get ready for the next evolution in football gaming with EA Sports FC 25! Experience the
+                        thrill
+                        of the pitch with realistic gameplay, stunning graphics, and an expansive roster of
+                        teams and
+                        players. Whether you're a seasoned pro or a newcomer, this event offers an immersive
+                        football
+                        experience like never before. Join us for competitive matches, community challenges, and
+                        more!
+                    </p>
+                    <a href="#" class="event-link">RSVP Now</a>
                 </section>
-                <section id="offices">
-                    <div id="headquarters">
-                        <h2>Headquarters</h2>
-                        <p>
-                            Our headquarters is located in Griffith College, Cork, Ireland.
-                        </p>
-                        <p>
-                            <strong>Address:</strong> Griffith College Cork, Wellington Road, Cork City, Co. Cork, Ireland
-                        </p>
-                        <p>
-                            <strong>Contact:</strong> +353 (12) 345 6789
-                        </p>
-                    </div>
-                    <br>
-                    <div id="branch-offices">
-                        <h2>Branch Offices</h2>
-                        <ul>
-                            <li>
-                                <strong>Dublin Office:</strong> 123 Dublin Street, Dublin, Ireland
-                            </li>
-                            <li>
-                                <strong>Lagos Office:</strong> 456 Lagos Avenue, Lagos, Nigeria
-                            </li>
-                            <li>
-                                <strong>Tokyo Office:</strong> 789 Tokyo Road, Tokyo, Japan
-                            </li>
-                            <li>
-                                <strong>Los Angeles Office</strong> : 101 Hollywood Blvd, Los Angeles, USA
-                            </li>
-                            <li>
-                                <strong>Seoul Office:</strong> 234 Seoul Street, Seoul, South Korea
-                            </li>
-                            <li>
-                                <strong>São Paulo Office:</strong> 567 São Paulo Avenue, São Paulo, Brazil
-                            </li>
-                            <li>
-                                <strong>Sydney Office:</strong> 890 Sydney Road, Sydney, Australia
-                            </li>
-                            <li>
-                                <strong>McMurdo Station Office:</strong>  123 Antarctic Road, Antarctica
-                            </li>
-                        </ul>
-                    </div>
+
+                <section id="learn-more-zelda" class="popup">
+                    <button class="close-zelda">X</button>
+                    <img src="../images/zelda.jpg" alt="Zelda Event">
+                    <h2>The Legend of Zelda</h2>
+                    <p class="event-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        August 12, 2025 – 5:00 PM GMT | Online
+                    </p>
+                    <p>
+                        Embark on an epic adventure in the world of Hyrule with The Legend of Zelda! Join Link
+                        on a
+                        quest to rescue Princess Zelda and defeat the forces of evil. Explore vast landscapes,
+                        solve
+                        intricate puzzles, and engage in thrilling combat. With its rich lore and captivating
+                        gameplay,
+                        this event promises to be a nostalgic journey for fans and a thrilling experience for
+                        newcomers.
+                    </p>
+                    <a href="#" class="event-link">RSVP Now</a>
                 </section>
-            </div>
+
+                <section id="learn-more-forza" class="popup">
+                    <button class="close-forza">X</button>
+                    <img src="../images/forza-background.jpg" alt="Forza Event">
+                    <h2>Forza Horizon 4</h2>
+                    <p class="event-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        August 19, 2025 – 2:00 PM GMT | Online
+                    </p>
+                    <p>
+                        Rev up your engines and hit the open road with Forza Horizon 4! Experience the thrill of
+                        high-speed racing in a breathtaking open-world set in historic Britain. Customize your
+                        dream car
+                        from a roster of over 700 vehicles, from hypercars to off-road beasts, and race across
+                        dynamic
+                        seasons that transform the landscape. Compete in heart-pounding races, stunts, and
+                        challenges,
+                        or cruise freely through cities, countryside, and rugged terrains. With robust
+                        multiplayer modes
+                        supporting up to 72 players, including custom events and the fan-favorite Eliminator
+                        battle
+                        royale, the action never stops.
+                    </p>
+                    <a href="#" class="event-link">RSVP Now</a>
+                </section>
+
+                <section id="learn-more-nba" class="popup">
+                    <button class="close-nba">X</button>
+                    <img src="../images/NBA2k25.jpg" alt="NBA Event">
+                    <h2>NBA 2K25</h2>
+                    <p class="event-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        August 30, 2025 – 7:00 PM GMT | Online
+                    </p>
+                    <p>
+                        Step onto the virtual court with NBA 2K25! Experience the excitement of professional
+                        basketball
+                        with realistic gameplay, stunning graphics, and an extensive roster of teams and
+                        players.
+                        Whether
+                        you're playing in MyCareer mode or competing in online matches, this event promises to
+                        deliver
+                        the ultimate basketball experience. Join us for slam dunks, buzzer-beaters, and
+                        unforgettable
+                        moments!
+                    </p>
+                    <a href="#" class="event-link">RSVP Now</a>
+                </section>
+
+                <section id="learn-more-mortalKombat" class="popup">
+                    <button class="close-mortalKombat">X</button>
+                    <img src="../images/mortal-kombat.jpg" alt="Mortal Kombat Event">
+                    <h2>Mortal Kombat OG</h2>
+                    <p class="event-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        August 25, 2025 – 8:00 PM GMT | Physical Event
+                    </p>
+                    <p>
+                        Enter the arena of epic battles with Mortal Kombat OG! Experience the classic fighting
+                        game that
+                        defined a generation. Choose your favorite characters, unleash devastating combos, and
+                        engage in
+                        brutal fatalities. With its iconic roster and intense gameplay, this event promises to
+                        deliver
+                        nostalgia and excitement for both veterans and newcomers. Get ready to fight for glory!
+                    </p>
+                    <p class="see-physical-location">See ticket for location!</p>
+                    <a href="#" class="event-link">RSVP Now</a>
+                </section>
+            </section>
         </main>
 
-        <footer id="footer">
+        <footer id=" footer">
             <div class="footer-logo">
                 <img src="../images/home-page-icon.png" alt="ETA GAMING Logo">
+            </div>
+            <div class="footer-bottom-left">
+                <p>&copy; All Rights Reserved @ETAGAMING</p>
             </div>
             <div class="footer-names">
                 <p>AUSTINE</p>
@@ -171,10 +485,8 @@
                     <a href="#">CODE OF CONDUCT</a>
                 </div>
             </div>
-            <div class="footer-bottom-left">
-                <p>&copy; All Rights Reserved @ETAGAMING</p>
-            </div>
         </footer>
+        <div id="dim-overlay"></div>
     </div>
 </body>
 
