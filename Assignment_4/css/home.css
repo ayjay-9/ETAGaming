@@ -123,6 +123,7 @@ aside {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+
 .sketchfab-embed-wrapper {
     position: fixed;
     top: 0;
@@ -264,6 +265,35 @@ aside {
     color: #2c9ef5;
 }
 
+/* names and admission number showcase on footer */
+.name {
+  position: relative;
+  cursor: pointer;
+}
+
+.name::after {
+  content: attr(data-number);
+  position: absolute;
+  bottom: 125%; /* Show above the name */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  color: white;
+  padding: 4px 7px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  margin-bottom: 0.1rem;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.name:hover::after {
+  opacity: 1;
+}
+
+
 /* media queries */
 
 
@@ -279,10 +309,10 @@ aside {
         top: 100%;
         right: 0;
         background-color: #ffffff;
-        width: 200px;
+        width: 10rem;
         padding: 1rem;
         display: none;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.658);
         transform: translateX(100%);
         opacity: 0;
         pointer-events: none;
@@ -293,6 +323,7 @@ aside {
         transform: translateX(0);
         opacity: 1;
         pointer-events: auto;
+        animation: pulseGlow 1.5s infinite ease-in-out;
     }
 
     #intro {
@@ -303,7 +334,15 @@ aside {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 150px; /* Adjust height for smaller screens */
+        height: 190px; /* Adjust height for smaller screens */
+    }
+    
+    .footer-names p {
+        padding: 0.5rem;
+    }
+    
+    .footer-socials img {
+    margin-bottom: 0.9rem;
     }
 }
 
@@ -323,4 +362,20 @@ aside {
     .hamburger {
         display: none;
     }
+}
+
+/* color effect for hamburger menu */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+                0 0 20px rgba(0, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7),
+                0 0 30px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+                0 0 20px rgba(0, 255, 255, 0.4);
+  }
 }
