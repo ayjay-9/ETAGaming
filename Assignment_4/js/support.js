@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById("email").value.trim();
     const ticket = document.getElementById("ticket").value;
     const message = document.getElementById("message").value.trim();
-
+    const submitFinalBtn = document.getElementById("submitFinalBtn");
     // Simple email validation
     if (!/^\S+@\S+\.\S+$/.test(email)) {
       statusMsg.style.color = "red";
@@ -138,4 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
     statusMsg.style.color = "red";
     statusMsg.textContent = "Submission cancelled. You can fill the form again.";
   });
+  submitFinalBtn.addEventListener("click", () => {
+    previewContainer.innerHTML = `
+    <h3>Thank you!</h3>
+    <p>Your message has been successfully submitted. We'll get back to you soon.</p>
+  `;
+  });
+
 });
