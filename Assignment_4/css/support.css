@@ -1,17 +1,7 @@
-body {
-    margin: 0 auto;
-    background: linear-gradient(to right, #000, #1a5aff);
-    width: 100%;
-    font-family: 'Bebas Neue', 'Poppins', sans-serif;
-    font-weight: bolder;
-    
-}
-
 .container {
   position: relative;
   max-width: 50%;
-  /* max-height: auto; */
-  height: 100vh;
+  max-height: auto;
   margin: 40px auto;
   background: #fff;
   padding: 40px 70px;
@@ -159,19 +149,6 @@ textarea {
   background: #fafafa;
 }
 
-.success {
-  background: #28a745;
-}
-
-.success:hover {
-  background: #218838;
-}
-
-#footer {
-    position: fixed;
-    bottom: 0;
-}
-
 @keyframes floatUp {
     0% {
         transform: translateY(0);
@@ -193,8 +170,58 @@ textarea {
 
 /* Responsive - hide links and show hamburger on small screens */
 @media (max-width: 984px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        width: 200px;
+        padding: 1rem;
+        display: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
     .counter {
         font-size: smaller;
         padding: 0 5px;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* visible nav on large screens */
+@media (min-width: 985px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
