@@ -3,6 +3,14 @@ html {
   height: 100%;
 }
 
+body {
+    margin: 0 auto;
+    background: linear-gradient(to right, #000, #1a5aff);
+    width: 100%;
+    font-family: 'Bebas Neue', 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
 /* LANDING SECTION STYLING */
 /* for main crousel */
 .carousel {
@@ -53,6 +61,8 @@ html {
 .slide-content h2 {
   font-size: 3rem;
   margin-bottom: 20px;
+   text-decoration: underline 0.2rem;
+  text-underline-offset: 1rem;
 }
 
 /* carousel button */
@@ -132,9 +142,9 @@ html {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  padding: 2rem 5%;
+  padding: 2rem 10%;
   background: #111;
-  gap: 2rem;
+  /* gap: 2rem; */
   flex-wrap: wrap;
 }
 
@@ -148,6 +158,8 @@ html {
 .genre-text h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  text-decoration: underline 0.2rem;
+  text-underline-offset: 1rem;
   color: #fff;
 }
 
@@ -160,12 +172,13 @@ html {
 
 /* genre carousel styling */
 .genre-gallery {
-  flex: 1;
-  position: relative;
   max-width: 50%;
-  height: 250px;
+  height: 352px;
+  position: relative;
+  width: 264px;
   overflow: hidden;
   border-radius: 10px;
+  animation: pulseGlow 1.5s infinite ease-in-out;
 }
 
 /* carousel parent folder */
@@ -174,16 +187,18 @@ html {
   width: 100%;
   height: 100%;
   transition: transform 0.6s ease;
+  
 }
 
 /* carousel images */
 .gallery-track img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   flex-shrink: 0;
   border-radius: 10px;
   transition: transform 0.5s ease;
+  
 }
 
 .gallery-track img:hover {
@@ -195,45 +210,17 @@ html {
 
 /* Responsive - hide links and show hamburger on small screens */
 @media (max-width: 984px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #ffffff;
-    width: 200px;
-    padding: 1rem;
-    display: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .nav-links.show {
-    display: flex;
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
+  
 
   /* slides images */
   .slide-img {
     object-fit: contain; 
 }
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  
 }
 
-/* visible nav on large screens */
+/* visible nav on large screens
 @media (min-width: 985px) {
   .nav-links {
     display: flex;
@@ -249,7 +236,7 @@ html {
   .hamburger {
     display: none;
   }
-}
+} */
 
 /* color effect for hamburger menu */
 @keyframes pulseGlow {
