@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dimOverlay.classList.remove('active');
 
             const card = link.closest('.event-card');
-            const title = card.querySelector('h1')?.textContent || '';
+            const title = card.querySelector('h2')?.textContent || '';
 
             // Determine which popup to show
             let popupId = '';
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (eventCard) {
                     // Button is inside an event-card
                     eventDetails = {
-                        title: eventCard.querySelector('h1').textContent,
+                        title: eventCard.querySelector('h2').textContent,
                         date: eventCard.querySelector('.event-date').textContent.split('–')[0].trim(),
                         time: eventCard.querySelector('.event-date').textContent.split('–')[1].trim(),
                         location: eventCard.querySelector('.see-physical-location')?.textContent || 'Online Event'
